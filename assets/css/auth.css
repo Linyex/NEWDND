@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=MedievalSharp&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1625 0%, #3a2d1a 100%);
+    background-image: url('/assets/img/parchment-texture.png'); /* если есть текстура */
+    background-size: cover;
+    font-family: 'Cinzel', 'MedievalSharp', serif;
+    color: #f3e9d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-box {
+    background: rgba(44, 36, 24, 0.95);
+    border: 3px solid #bfa76a;
+    border-radius: 18px;
+    box-shadow: 0 0 40px #000a, 0 0 0 8px #bfa76a33;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: fadeInBox 1s cubic-bezier(.4,2,.6,1);
+}
+
+@keyframes fadeInBox {
+    from { opacity: 0; transform: translateY(-40px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.auth-box h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.1rem;
+    color: #ffe7a3;
+    text-shadow: 0 2px 8px #000a;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.form-group label {
+    font-family: 'MedievalSharp', serif;
+    font-size: 1.1rem;
+    color: #e2c275;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 2px solid #bfa76a;
+    border-radius: 8px;
+    background: #2d2416;
+    color: #ffe7a3;
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ffe7a3;
+    box-shadow: 0 0 8px #ffe7a3aa;
+    outline: none;
+}
+
+.auth-button {
+    background: linear-gradient(90deg, #bfa76a 0%, #ffe7a3 100%);
+    color: #2d2416;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 0;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0005;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.auth-button:hover {
+    background: linear-gradient(90deg, #ffe7a3 0%, #bfa76a 100%);
+    color: #7a5c1a;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.auth-links {
+    margin-top: 1.2rem;
+    text-align: center;
+}
+.auth-links a {
+    color: #ffe7a3;
+    text-decoration: none;
+    font-family: 'MedievalSharp', serif;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: color 0.3s;
+}
+.auth-links a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #bfa76a;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+.auth-links a:hover {
+    color: #bfa76a;
+}
+.auth-links a:hover:after {
+    width: 100%;
+}
+
+.error-message {
+    background: #7a1a1aee;
+    color: #fff0e0;
+    border: 2px solid #bfa76a;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px #0005;
+}
+.success-message {
+    background: #2d7a1aee;
+    color: #fff0e0;
+    border: 2px solid #bfa76a;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px #0005;
+}
+
+/* Анимация перехода между формами */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+}
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.98);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Декоративные элементы */
+.auth-box:before {
+    content: '';
+    position: absolute;
+    top: -18px; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 36px;
+    background: url('/assets/img/dnd-decor-top.png') no-repeat center/contain;
+    opacity: 0.8;
+}
+.auth-box:after {
+    content: '';
+    position: absolute;
+    bottom: -18px; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 36px;
+    background: url('/assets/img/dnd-decor-bottom.png') no-repeat center/contain;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .auth-box {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    .auth-box:before, .auth-box:after {
+        width: 40px; height: 24px;
+    }
+} 

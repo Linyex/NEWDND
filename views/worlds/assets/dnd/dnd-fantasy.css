@@ -1,0 +1,93 @@
+body {
+    background: url('../../assets/images/parchment-bg.jpg') repeat;
+    background-size: cover;
+    color: #2a1800;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dnd-fantasy-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 248, 220, 0.95);
+    border: 3px solid #bfa76f;
+    border-radius: 18px;
+    box-shadow: 0 0 40px #bfa76f88, 0 0 0 8px #fff8dc55 inset;
+    padding: 2.5rem 2rem;
+    position: relative;
+}
+
+.dnd-fantasy-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: #7c4a03;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #fff8dc, 0 0 2px #bfa76f;
+    margin-bottom: 2rem;
+}
+
+.dnd-fantasy-section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 240, 0.97);
+    border-left: 6px solid #bfa76f;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #bfa76f33;
+}
+
+.dnd-fantasy-section h2 {
+    font-family: 'Cinzel', serif;
+    color: #a67c2d;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 4px #fff8dc, 0 0 2px #bfa76f;
+}
+
+.dnd-fantasy-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.dnd-fantasy-section ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.dnd-fantasy-section ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-size: 1.1em;
+    text-shadow: 0 0 4px #fff8dc;
+}
+
+.dnd-fantasy-section, .dnd-fantasy-section p {
+    text-shadow: none;
+}
+
+a {
+    color: #7c4a03;
+    text-decoration: none;
+    border-bottom: 1px dashed #a67c2d;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+a:hover {
+    color: #d4af37;
+    border-bottom: 1px solid #d4af37;
+    text-shadow: 0 0 8px #fff8dc;
+}
+
+@media (max-width: 600px) {
+    .dnd-fantasy-container {
+        padding: 1rem 0.5rem;
+    }
+    .dnd-fantasy-title {
+        font-size: 2rem;
+    }
+} 
